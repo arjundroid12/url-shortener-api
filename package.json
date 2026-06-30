@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener-api",
+  "version": "1.0.0",
+  "description": "REST API for shortening URLs with click analytics, custom aliases, and expiry. Node.js + Express + LowDB.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "lowdb": "^7.0.1",
+    "nanoid": "^5.0.7",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Arjun Vashishtha",
+  "license": "MIT"
+}
