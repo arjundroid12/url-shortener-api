@@ -63,6 +63,21 @@ Visiting `http://localhost:3000/my-gh` redirects to the long URL (302).
 }
 ```
 
+## 🚀 Live Demo
+
+This app requires a Node.js backend, so it can't run on GitHub Pages or Surge.sh (which are static-only).
+
+### ⚡ One-Click Deploy to Render (free)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/arjundroid12/url-shortener-api)
+
+**Steps (~2 minutes):**
+1. Click the button above
+2. Sign in to Render with your GitHub account (no credit card needed)
+3. Click "Create Web Service" (defaults are pre-filled from `render.yaml`)
+4. Wait ~90 seconds for build & deploy
+5. Your API will be at `https://url-shortener-api-xxxx.onrender.com`
+
 ## 📦 Run Locally
 
 ```bash
