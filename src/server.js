@@ -15,11 +15,18 @@ import cors from "cors";
 import { JSONFilePreset } from "lowdb/node";
 import { nanoid } from "nanoid";
 import path from "node:path";
+import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.PORT || 3000;
-const DB_FILE = path.join(__dirname, "..", "data", "db.json");
+const DB_DIR = path.join(__dirname, "..", "data");
+const DB_FILE = path.join(DB_DIR, "db.json");
+
+// Ensure the data directory exists before LowDB tries to write
+if (!fs.existsSync(DB_DIR)) {
+  fs.mkdirSync(DB_DIR, { recursive: true });
+}
 
 // ---------- DB schema ----------
 const defaultData = { links: {} };
